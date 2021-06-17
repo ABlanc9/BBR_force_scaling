@@ -1,0 +1,13 @@
+This code accompanies the manuscript: "Burnt bridge ratchet motor force scales linearly with polyvalency: a computational study" By Aaron T. Blanchard (Soft Matter, 2021, DOI: 10.1039/D1SM00676B)
+
+Note that these functions were not professionally written and may contain bugs, inefficiencies, and confusing sections. These function were not written with other end-users in mind. They are also uncommented. Please use at your own risk. Contact Aaron Blanchard at ATBlanchard@ymail.com if you have questions. Here is a list of descriptions of the files included:
+
+MarkovChainNoForceOptimizeKon.m – Used to calculate data for Figure 2b and optimize kon values.
+WLCapprox.m – Contains code for performing Petrosyan approximation of WLC force-extension curves. Used in EnergyExtensionCalc.m.
+EnergyExtensionCalc.m – Calculates the energy-extension curves for tethers and the association transition state.
+FEX15bpAndTethTst.mat – Contains energy-extension calculations, generated using EnergyExtensionCalc.m, used in subsequent functions.
+konAndKoffVsForcePlot.m – Used to calculate data for Figure 3 c-e. Try decreasing Npts to make the code run faster. PDF variables were used to calculate PDFs shown in Figure 3b. 
+“Fixed Force Dependent On Rate Output.mat” contains calculations for Markov Chain calculations (needed for MarkovChainWithFoce.m) and was generated using konAndKoffVsForcePlot.m.
+MarkovChainWithForce.m – Used to calculate data for Figure 3f,g and estimate polyvalency scaling
+“F50 vs Force 1 second output.mat” and “F50 vs Force 1 minute output.mat” are used in PostProcessF50vN.m for display purposes and were generated with MarkovChainWithForce.m. (Note F50 is equivalent to Fstall).
+PostProcessF50vN.m – Used to generate final figures for Figure 3g.
